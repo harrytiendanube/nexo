@@ -1,8 +1,6 @@
 name: Approve PR Sync
 on:
-  pull_request_target:
-    branches:
-      - 'sync/int-stats-master'
+  pull_request_target
 
 jobs:
   build:
