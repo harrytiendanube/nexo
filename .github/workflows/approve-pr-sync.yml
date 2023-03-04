@@ -1,7 +1,11 @@
 name: Approve PR Sync
 on:
   pull_request_target:
-  
+    types:
+      - opened
+    branches:
+      - 'sync/**'
+
 jobs:
   build:
     runs-on: ubuntu-latest
