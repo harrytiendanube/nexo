@@ -1,15 +1,15 @@
 name: Approve PR Sync
 on: 
   pull_request_target:
-    types: [assigned, opened, synchronize, reopened]
     branches:
-      - 'nueva-**'
-    
+      - 'int/**'
+      
 jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
+    if:  startsWith(github.event.pull_request.head.ref, 'sync/')
     steps:
       - name: Initial
         id: node_version
