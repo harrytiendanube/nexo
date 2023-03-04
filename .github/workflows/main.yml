@@ -1,8 +1,6 @@
 name: Approve PR Sync
 on:
   pull_request_target:
-    branches:
-      - 'sync/**'
       
 jobs:
   build:
@@ -13,6 +11,3 @@ jobs:
       - name: Initial
         id: node_version
         run: echo "start ..."
-        
-      - name: Approve
-        uses: hmarr/auto-approve-action@v3
