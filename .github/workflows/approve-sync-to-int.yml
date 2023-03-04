@@ -1,4 +1,4 @@
-name: Approve PR Sync
+name: Approve Sync to Integration 🚀
 on: 
   pull_request_target:
     branches:
@@ -11,7 +11,6 @@ jobs:
       pull-requests: write
     if:  startsWith(github.event.pull_request.head.ref, 'sync/')
     steps:
-      - name: approve
-        uses: hmarr/auto-approve-action@v3
+      - uses: hmarr/auto-approve-action@v3
         with:
           review-message: "Ready to sync 🚀"
