@@ -10,4 +10,9 @@ jobs:
     permissions:
       pull-requests: write
     steps:
-      - uses: hmarr/auto-approve-action@v3
+      - name: Initial
+        id: node_version
+        run: echo "start ..."
+        
+      - name: Approve
+        uses: hmarr/auto-approve-action@v3
